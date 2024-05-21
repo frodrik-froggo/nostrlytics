@@ -38,8 +38,7 @@ jobs:
 
       - name: Zip dist folder with version
         run: |
-          VERSION=${{ steps.get_version.outputs.version }}
-          zip -r ./dist-$VERSION.zip ./dist
+          zip -r ./dist-${{ env.VERSION }}.zip ./dist
 
       - name: Create GitHub Release
         id: create_release
