@@ -13,10 +13,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Remove existing Node.js
+        run: |
+          sudo apt-get remove -y nodejs
+          sudo apt-get autoremove -y
+
       - name: Install Node.js 21 manually
         run: |
           curl -sL https://deb.nodesource.com/setup_21.x | sudo -E bash -
-          sudo apt-get install -y nodejs
+          sudo apt-get install -y nodejs  
 
       - name: Check Node.js version
         run: node --version
@@ -37,6 +42,7 @@ jobs:
           zip -r ./dist-$VERSION.zip ./dist
 
       - name: Create GitHub Release
+        permissions: write-all
         id: create_release
         uses: actions/create-release@v1
         env:
