@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    document.nostrlyticsConfig ={
+      relays: [
+        'wss://relay.damus.io',
+        'wss://relay.snort.social'
+      ],
+      receiverPubkey: 'b9b8a9749442726a99b2e6d194d14d907857a10786ae0c47f79a07c31149e27d',
+      countImpressions: true,
+      countClickOuts: true,
+    }
+  </script>
+  <meta charset='utf-8' />
+</head>
+<body>
+    <h1>hello world</h1>
+    <div>
+      I will emit a nostrlytics event whenever I get reloaded
+    </div>
+    <div>
+      <a href="https://google.de/" data-type="nostrlytics" target="_blank">Go to report</a>
+    </div>
+
+
+</body>
+<script type='module' src='src/ts/index.ts'></script>
+
+</html>
