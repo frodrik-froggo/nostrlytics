@@ -15,12 +15,18 @@ export default {
     port: PORT
   },
   plugins: [
-    legacy(),
+    //legacy(),
+    //viteSingleFile({
+    //  deleteInlinedFiles: true,
+    //  removeViteModuleLoader: true
+    //})
+    /*
     visualizer({
       emitFile: true,
       filename: 'stats.html',
       template: 'sunburst'
     })
+     */
   ],
   build: {
     sourcemap: false
