@@ -22,7 +22,7 @@ It contains:
 
 2. Add the nostrlytics script to your website inside the `<head>` tag.
 ```html
-  <script>
+<script>
   document.nostrlyticsConfig ={
     relays: [
       'wss://relay.damus.io',
@@ -34,7 +34,6 @@ It contains:
     countClickOuts: true,
   }
 </script>
-<meta charset='utf-8' />
 <script type="module" crossorigin src="/<path to your files>/assets/index-Bfjtchap.js"></script>
 ```
 
